@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: azure;
+}
+
+.header {
+    font-family: Monaco, monospace;
+}
+
+nav ul li {
+    margin: 0px 10px 0px 10px;
+    list-style: none;
+    text-decoration: none;
+    display: inline;
+    font-family: Monaco, monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: mediumaquamarine;
+    margin: 2vw;
+}
+
+main {
+    margin: 2vw;
+}
+
+footer {
+    margin: 2vw;
+}
+
+input[type=checkbox]:checked ~ section {
+    display: none;
+}
