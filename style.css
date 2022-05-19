@@ -149,6 +149,7 @@ footer {
 #hidden-phone,
 #hidden-add {
     color: gray;
+    margin-top: 5px;
 }
 
 #show-email,
