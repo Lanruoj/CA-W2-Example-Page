@@ -5,26 +5,64 @@
 
 body {
     background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: Monaco, monospace;
+    font-size: 14px;
 }
 
-.header {
+header {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.headlogo {
+    margin: 0px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
     font-family: Monaco, monospace;
+    color: rgb(255, 255, 255);
+    background-image: -webkit-linear-gradient(right,rgb(148, 34, 255), rgb(0, 55, 255));
+    border-radius: 50%;
+    box-shadow: 0px 10px black;
+    filter: grayscale(50%);
+    transition: .5s ease-in;
+}
+
+.headlogo:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+nav {
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 nav ul li {
     margin: 0px 10px 0px 10px;
     list-style: none;
-    text-decoration: none;
     display: inline;
     font-family: Monaco, monospace;
 }
 
 a {
     text-decoration: none;
+    color: black;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: blue;
 }
 
 header {
-    background-color: mediumaquamarine;
     margin: 2vw;
 }
 
@@ -34,8 +72,86 @@ main {
 
 footer {
     margin: 2vw;
+    font-size: 10px;
+    font-style: italic;
 }
 
-input[type=checkbox]:checked ~ section {
+.project-img {
+    width: 50vw;
+    border-style: dashed;
+}
+
+.project-list {
+    text-align: center;
+    list-style: none;
+}
+
+.project-list li {
+    margin: 10px;
+    font-style: italic;
+}
+
+.project-list figcaption {
+    font-size: 10px;
+}
+
+
+#show-email, #hidden-email {
     display: none;
 }
+
+#show-email:checked ~ #hidden-email {
+    display: block;
+}
+
+#show-phone, #hidden-phone {
+    display: none;
+}
+
+#show-phone:checked ~ #hidden-phone{
+    display: block;
+}
+
+#show-add, #hidden-add {
+    display: none;
+}
+
+#show-add:checked ~ #hidden-add {
+    display: block;
+}
+
+.details {
+    text-align: center;
+    margin: 10px;
+}
+
+.details > div {
+    margin: 20px;
+}
+
+.details h3 {
+    background-image: -webkit-linear-gradient(right,rgb(148, 34, 255), rgb(0, 55, 255));
+    border-radius: 50%;
+    box-shadow: 0px 5px black;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: 0.5s ease-in;
+}
+
+.details h3:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+#hidden-email,
+#hidden-phone,
+#hidden-add {
+    color: gray;
+}
+
+#show-email,
+#show-phone,
+#show-add {
+    font-size: 20px;
+}
+
